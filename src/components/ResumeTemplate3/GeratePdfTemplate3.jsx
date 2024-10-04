@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {useState} from "react";
 import InputsTemplate3 from './InputsTemplate3';
 import { ValidationForm3 } from './ValidationForm3';
 import './style.css';

@@ -1,5 +1,3 @@
-import React from "react";
-
 export function TitlesTemplate2() {
     return (
         <div className="Titles">

@@ -6,7 +6,21 @@ export default defineConfig({
   plugins: [react(), commonjs()],
   build: {
     rollupOptions: {
-      external: ['pdfmake'], 
+      external: ['pdfmake'],
+      output: {
+        globals: {
+          pdfmake: 'pdfMake',
+        },
+      },
     },
   },
+  esbuild: {
+    jsxInject: `import React from 'react'`, 
+    jsxFactory: 'React.createElement',
+    jsxFragment: 'React.Fragment',
+  },
+  namedExports: {
+    'react/jsx-runtime': ['jsx', 'jsxs'],
+    'react/jsx-dev-runtime': ['jsx', 'jsxs', 'jsxDEV'],
+},
 });

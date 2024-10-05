@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useState } from "react";
 import InputsTemplate2 from "./InputsTemplate2";
 import { ValidationForm2 } from "./ValidationForm2";
 import './style.css';
@@ -11,10 +11,12 @@ export function UserGeneratePDF() {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
+        address: '',
         contact: '',
-        aboutMe: '',
         formation: '',
-        experience: ''
+        objective: '',
+        informationComplement: '',
+        completeActivities: '',
     });
 
     const handleChange = (field, value) => {
@@ -27,15 +29,6 @@ export function UserGeneratePDF() {
     const [errorMessage, setErrorMessage] = useState([]);
 
     const createPdf = () => {
-        const labelMapping = {
-            name: 'Nome',
-            email: 'Email',
-            contact: 'Contato',
-            aboutMe: 'Sobre mim',
-            formation: 'Formação',
-            experience: 'Experiência Profisional'
-        }
-
         const docDefinition = {
             content: [
                 {
@@ -52,6 +45,11 @@ export function UserGeneratePDF() {
                     alignment: 'right',
                 },
                 {
+                    text: `Endereço: ${formData.address}`,
+                    style: 'contact',
+                    alignment: 'right',
+                },
+                {
                     text: `${formData.email}\n${formData.contact}`,
                     style: 'contact',
                     alignment: 'right',
@@ -61,13 +59,13 @@ export function UserGeneratePDF() {
                     margin: [0, 20, 0, 20],
                 },
                 {
-                    text: 'SOBRE MIM',
+                    text: 'OBJETIVO',
                     style: 'subheader',
                     color: '#1a1aff',
                     alignment: 'left',
                 },
                 {
-                    text: formData.aboutMe,
+                    text: formData.objective,
                     style: 'normalText',
                     margin: [0, 10, 0, 20],
                 },
@@ -91,14 +89,34 @@ export function UserGeneratePDF() {
                     margin: [0, 20, 0, 20],
                 },
                 {
-                    text: 'EXPERIÊNCIA',
+                    text: 'APERFEIÇOAMENTO E ATIVIDADES COMPLEMENTARES',
                     style: 'subheader',
                     color: '#1a1aff',
                     alignment: 'left',
                 },
                 {
-                    text: formData.experience,
+                    text: formData.completeActivities,
                     style: 'normalText',
+                    margin: [0, 10, 0, 20],
+                },
+                {
+                    canvas: [{ type: 'line', x1: 0, y1: 0, x2: 515, y2: 0, lineWidth: 1, lineColor: '#1a1aff' }],
+                    margin: [0, 20, 0, 20],
+                },
+                {
+                    text: 'INFORMAÇÕES COMPLEMENTARES',
+                    style: 'subheader',
+                    color: '#1a1aff',
+                    alignment: 'left',
+                },
+                {
+                    text: formData.informationComplement,
+                    style: 'normalText',
+                    margin: [0, 10, 0, 20],
+                },
+                {
+                    canvas: [{ type: 'line', x1: 0, y1: 0, x2: 515, y2: 0, lineWidth: 1, lineColor: '#1a1aff' }],
+                    margin: [0, 20, 0, 20],
                 },
             ],
             styles: {
@@ -128,8 +146,6 @@ export function UserGeneratePDF() {
         const pdfDocGenerator = pdfMake.createPdf(docDefinition);
         pdfDocGenerator.download('curriculo.pdf');
 
-
-
     }
     const handleClickButton = () => {
         const errors = ValidationForm2(formData);
@@ -145,11 +161,13 @@ export function UserGeneratePDF() {
             <div className="inputs-container">
                 <InputsTemplate2
                     setName={(value) => handleChange('name', value)}
+                    setAddress={(value) => handleChange('address', value)}
                     setEmail={(value) => handleChange('email', value)}
                     setContact={(value) => handleChange('contact', value)}
-                    setAboutMe={(value) => handleChange('aboutMe', value)}
                     setFormation={(value) => handleChange('formation', value)}
-                    setExperience={(value) => handleChange('experience', value)}
+                    setCompleteActivities={(value) => handleChange('completeActivities', value)}
+                    setInformationComplement={(value) => handleChange('informationComplement', value)}
+                    setObjective={(value) => handleChange('objective', value)}
                 />
             </div>
             {errorMessage.length > 0 && (

@@ -1,6 +1,5 @@
 import curriculoImage from './Curriculo1.png';
 import curriculoImage2 from './Curriculo2.png';
-import curriculoImage3 from './Curriculo3.png';
 import './style.css';
 
 export function SelectTemplate() {
@@ -25,14 +24,6 @@ export function SelectTemplate() {
                             <img src={curriculoImage2} alt="Modelo de Currículo 2" className="template-image" />
                             <figcaption>
                                 <a href="/ResumeTemplateTwo" className="template-link">Modelo 2</a>
-                            </figcaption>
-                        </figure>
-                    </article>
-                    <article className='template-item'>
-                        <figure>
-                            <img src={curriculoImage3} alt="Modelo de Currículo 3" className="template-image" />
-                            <figcaption>
-                                <a href="/ResumeTemplateThree" className="template-link">Modelo 3</a>
                             </figcaption>
                         </figure>
                     </article>

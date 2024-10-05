@@ -2,13 +2,12 @@ import './style.css';
 
 const Inputs = ({
     setName,
-    setAbout,
     setAddress,
     setContact,
+    setEmail,
     setObjective,
     setFormation,
     setCompleteActivities,
-    setResumeSkills,
     setInformationComplement
 }) => {
     const handleInputChange = (setter) => (event) => {
@@ -29,16 +28,6 @@ const Inputs = ({
                 </div>
 
                 <div className="form-group">
-                    <label htmlFor="aboutMe">Sobre Mim:</label>
-                    <input
-                        type="text"
-                        id="aboutMe"
-                        placeholder="Digite algo sobre você"
-                        onChange={handleInputChange(setAbout)}
-                    />
-                </div>
-
-                <div className="form-group">
                     <label htmlFor="address">Endereço:</label>
                     <input
                         type="text"
@@ -51,10 +40,20 @@ const Inputs = ({
                 <div className="form-group">
                     <label htmlFor="contact">Contato:</label>
                     <input
-                        type="text"
+                        type="number"
                         id="contact"
-                        placeholder="Digite seu número ou e-mail"
+                        placeholder="Digite seu número"
                         onChange={handleInputChange(setContact)}
+                    />
+                </div>
+
+                <div className="form-group">
+                    <label htmlFor="email">Email:</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Digite seu email"
+                        onChange={handleInputChange(setEmail)}
                     />
                 </div>
 
@@ -78,20 +77,11 @@ const Inputs = ({
                 </div>
 
                 <div className="form-group">
-                    <label htmlFor="completeActivities">Atividades Complementares:</label>
+                    <label htmlFor="completeActivities">Aperfeiçoamento e atividades complementares</label>
                     <textarea
                         id="completeActivities"
                         placeholder="Digite suas atividades complementares"
                         onChange={handleInputChange(setCompleteActivities)}
-                    />
-                </div>
-
-                <div className="form-group">
-                    <label htmlFor="resumeSkills">Resumo de Qualificações:</label>
-                    <textarea
-                        id="resumeSkills"
-                        placeholder="Digite suas habilidades"
-                        onChange={handleInputChange(setResumeSkills)}
                     />
                 </div>
 

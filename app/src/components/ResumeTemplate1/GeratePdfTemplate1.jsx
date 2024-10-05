@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useState } from "react";
 import Inputs from "./InputsTemplates1";
 import { ValidationForm } from "./ValidationForm";
 import './style.css';
@@ -10,14 +10,12 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
 export function UserGeneratePDF() {
   const [formData, setFormData] = useState({
     name: '',
-    Image: '',
-    about: '',
     address: '',
     contact: '',
+    email: '',
     objective: '',
     formation: '',
     completeActivities: '',
-    resumeSkills: '',
     informationComplement: '',
   });
 
@@ -39,21 +37,27 @@ export function UserGeneratePDF() {
           alignment: 'center',
         },
         {
-          text: `${formData.address}\n${formData.contact}`,
-          margin: [0, 10, 0, 20],
-          alignment: 'center',
+          text: `Endereço: ${formData.address}`,
+          alignment: 'left',
+        },
+        {
+          text: `Telefone: ${formData.contact} / ${formData.email}`,
+          alignment: 'left',
         },
         {
           text: 'OBJETIVO',
           style: 'subheader',
+          alignment: 'center',
         },
         {
           text: formData.objective,
+          alignment: 'center',
           margin: [0, 0, 0, 20],
         },
         {
           text: 'FORMAÇÃO',
           style: 'subheader',
+          alignment: 'center',
         },
         {
           ul: formData.formation.split('\n'),
@@ -62,25 +66,19 @@ export function UserGeneratePDF() {
         {
           text: 'APERFEIÇOAMENTO E ATIVIDADES COMPLEMENTARES',
           style: 'subheader',
+          alignment: 'center',
         },
         {
           ul: formData.completeActivities.split('\n'),
           margin: [0, 0, 0, 20],
         },
         {
-          text: 'Resumo de Qualificações:',
+          text: 'INFORMAÇÕES COMPLEMENTARES',
           style: 'subheader',
+          alignment: 'center',
         },
         {
-          ul: formData.resumeSkills.split('\n'),
-          margin: [0, 0, 0, 20],
-        },
-        {
-          text: 'Informações Complementares',
-          style: 'subheader',
-        },
-        {
-          text: formData.informationComplement,
+          ul: formData.informationComplement.split('\n'),
           margin: [0, 0, 0, 20],
         },
       ],
@@ -115,12 +113,11 @@ export function UserGeneratePDF() {
       <div className="input-container">
         <Inputs
           setName={(value) => handleChange('name', value)}
-          setAbout={(value) => handleChange('about', value)}
           setAddress={(value) => handleChange('address', value)}
           setContact={(value) => handleChange('contact', value)}
+          setEmail={(value) => handleChange('email', value)}
           setObjective={(value) => handleChange('objective', value)}
           setCompleteActivities={(value) => handleChange('completeActivities', value)}
-          setResumeSkills={(value) => handleChange('resumeSkills', value)}
           setInformationComplement={(value) => handleChange('informationComplement', value)}
           setFormation={(value) => handleChange('formation', value)}
         />

@@ -4,9 +4,11 @@ const InputsTemplate2 = ({
     setName,
     setEmail,
     setContact,
-    setAboutMe,
+    setAddress,
+    setObjective,
     setFormation,
-    setExperience
+    setInformationComplement,
+    setCompleteActivities
 }) => {
     const handleInputChange = (setter) => (event) => {
         setter(event.target.value);
@@ -26,6 +28,16 @@ const InputsTemplate2 = ({
                 </div>
 
                 <div className="form-group">
+                    <label htmlFor="address">Endereço:</label>
+                    <input
+                        type="text"
+                        id="address"
+                        placeholder="Digite seu endereço"
+                        onChange={handleInputChange(setAddress)}
+                    />
+                </div>
+
+                <div className="form-group">
                     <label htmlFor="email">Email:</label>
                     <input
                         type="email"
@@ -38,7 +50,7 @@ const InputsTemplate2 = ({
                 <div className="form-group">
                     <label htmlFor="contact">Contato:</label>
                     <input
-                        type="tel"
+                        type="number"
                         id="contact"
                         placeholder="Digite seu contato"
                         onChange={handleInputChange(setContact)}
@@ -46,12 +58,12 @@ const InputsTemplate2 = ({
                 </div>
 
                 <div className="form-group">
-                    <label htmlFor="aboutMe">Sobre Mim:</label>
+                    <label htmlFor="aboutMe">Objetivo:</label>
                     <input
                         type="text"
                         id="aboutMe"
                         placeholder="Fale um pouco sobre você"
-                        onChange={handleInputChange(setAboutMe)}
+                        onChange={handleInputChange(setObjective)}
                     />
                 </div>
 
@@ -64,14 +76,26 @@ const InputsTemplate2 = ({
                     />
                 </div>
 
+
                 <div className="form-group">
-                    <label htmlFor="experience">Experiência:</label>
+                    <label htmlFor="completeActivities">Aperfeiçoamento e atividades complementares:</label>
                     <textarea
-                        id="experience"
-                        placeholder="Digite sua experiência"
-                        onChange={handleInputChange(setExperience)}
+                        id="completeActivities"
+                        placeholder="Digite suas atividades complementares"
+                        onChange={handleInputChange(setCompleteActivities)}
                     />
                 </div>
+
+                <div className="form-group">
+                    <label htmlFor="informationComplement">Informações Complementares:</label>
+                    <input
+                        type="text"
+                        id="informationComplement"
+                        placeholder="Digite informações complementares"
+                        onChange={handleInputChange(setInformationComplement)}
+                    />
+                </div>
+
             </form>
         </div>
     );

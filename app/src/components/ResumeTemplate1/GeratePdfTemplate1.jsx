@@ -34,7 +34,7 @@ export function UserGeneratePDF() {
         {
           text: formData.name,
           style: 'header',
-          alignment: 'center',
+          alignment: 'left',
         },
         {
           text: `Endereço: ${formData.address}`,
@@ -45,40 +45,40 @@ export function UserGeneratePDF() {
           alignment: 'left',
         },
         {
-          text: 'OBJETIVO',
+          text: 'Objetivo',
           style: 'subheader',
-          alignment: 'center',
+          alignment: 'left',
         },
         {
           text: formData.objective,
-          alignment: 'center',
+          alignment: 'left',
           margin: [0, 0, 0, 20],
         },
         {
-          text: 'FORMAÇÃO',
+          text: 'Formação',
           style: 'subheader',
-          alignment: 'center',
+          alignment: 'left',
         },
         {
           ul: formData.formation.split('\n'),
           margin: [0, 0, 0, 20],
         },
         {
-          text: 'APERFEIÇOAMENTO E ATIVIDADES COMPLEMENTARES',
+          text: 'Qualificações Profissional',
           style: 'subheader',
-          alignment: 'center',
+          alignment: 'left',
         },
         {
           ul: formData.completeActivities.split('\n'),
           margin: [0, 0, 0, 20],
         },
         {
-          text: 'INFORMAÇÕES COMPLEMENTARES',
+          text: 'Informações Complementares',
           style: 'subheader',
-          alignment: 'center',
+          alignment: 'left',
         },
         {
-          ul: formData.informationComplement.split('\n'),
+          text: formData.informationComplement,
           margin: [0, 0, 0, 20],
         },
       ],

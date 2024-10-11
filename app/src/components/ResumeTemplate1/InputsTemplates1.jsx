@@ -77,10 +77,10 @@ const Inputs = ({
                 </div>
 
                 <div className="form-group">
-                    <label htmlFor="completeActivities">Aperfeiçoamento e atividades complementares</label>
+                    <label htmlFor="completeActivities">Qualificação Profissional</label>
                     <textarea
                         id="completeActivities"
-                        placeholder="Digite suas atividades complementares"
+                        placeholder="Digite suas qualificações profissionais"
                         onChange={handleInputChange(setCompleteActivities)}
                     />
                 </div>

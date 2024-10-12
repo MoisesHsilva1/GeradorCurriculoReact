@@ -25,11 +25,9 @@ Este projeto é um **Gerador de Currículo** desenvolvido utilizando **React** e
 <img loading="lazy" src="http://img.shields.io/static/v1?label=STATUS&message=%20DESENVOLVIDO&color=GREEN&style=for-the-badge"/>
 </p>
 
-## Como Executar o Projeto
+## Projeto em ação
 
-Siga os passos abaixo para executar o projeto em sua máquina local:
+https://dz8ngj-5173.csb.app/
 
-1. **Clone o repositório**:
-   ```bash
-   git clone https://github.com/seu-usuario/gerador-curriculo.git
-   cd gerador-curriculo
+
+

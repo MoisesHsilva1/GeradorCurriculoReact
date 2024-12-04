@@ -16,7 +16,6 @@ Este projeto é um **Gerador de Currículo** desenvolvido utilizando **React** e
 - **React**: Biblioteca JavaScript para construção de interfaces de usuário interativas e dinâmicas.
 - **PDFMake**: Biblioteca que permite a criação de documentos PDF de forma programática, utilizada para gerar o currículo final.
 - **Vite**: Ferramenta de construção e desenvolvimento rápido que oferece uma configuração mínima e desempenho otimizado para aplicações modernas.
-- **Express**: Framework web para Node.js que facilita a criação de servidores e APIs, usado para gerenciar as requisições da aplicação.
 - **CSS**: Utilizado para estilizar a aplicação e garantir um design responsivo e atraente.
 
 ## Status do Projeto

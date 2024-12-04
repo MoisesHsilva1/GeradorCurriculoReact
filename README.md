@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Este projeto é um **Gerador de Currículo** desenvolvido utilizando **React** e a biblioteca **PDFMake**. O sistema foi construído com a arquitetura **MVC (Model-View-Controller)** e utiliza **Vite** para o desenvolvimento e **Express** para o backend. O objetivo deste projeto é facilitar a criação de currículos personalizados e modernos, permitindo que os usuários insiram suas informações e gerem um PDF formatado de maneira adequada para apresentação em processos seletivos.
+Este projeto é um **Gerador de Currículo** desenvolvido utilizando **React** e a biblioteca **PDFMake** e utiliza **Vite** para o desenvolvimento. O objetivo deste projeto é facilitar a criação de currículos personalizados e modernos, permitindo que os usuários insiram suas informações e gerem um PDF formatado de maneira adequada para apresentação em processos seletivos.
 
 ## Funcionalidades
 

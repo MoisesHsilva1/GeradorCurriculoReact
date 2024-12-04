@@ -8,7 +8,6 @@ Este projeto é um **Gerador de Currículo** desenvolvido utilizando **React** e
 
 - **Criação Personalizada de Currículos**: Os usuários podem preencher informações como nome, contatos, experiência profissional, educação, habilidades e muito mais.
 - **Geração de PDF**: O currículo é convertido em um arquivo PDF que pode ser baixado e impresso, facilitando o compartilhamento com empregadores.
-- **Modelo MVC**: A aplicação segue a arquitetura MVC, separando a lógica de apresentação, controle e dados, o que melhora a manutenção e escalabilidade do código.
 - **Interface Responsiva**: O design da aplicação se adapta a diferentes tamanhos de tela, garantindo uma experiência de usuário agradável em dispositivos móveis e desktop.
 
 ## Tecnologias Utilizadas
